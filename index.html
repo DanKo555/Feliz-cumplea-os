@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Dancing+Script:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Cascada Hacker (ahora rosa desde el inicio) -->
+    <canvas id="matrix"></canvas>
+
+    <!-- Contenedor principal -->
+    <div id="main-container">
+
+        <!-- Texto Hacker -->
+        <div id="text-container">
+            <h1 id="typing-text"></h1>
+        </div>
+
+        <!-- SOBRE / CARTA animado -->
+        <div id="envelope-wrapper" class="hidden">
+            <!-- El sobre -->
+            <div id="envelope" class="closed">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body">
+                    <div class="envelope-heart">💌</div>
+                </div>
+            </div>
+            <!-- La carta (se despliega al abrir) -->
+            <div id="letter-paper" class="hidden-letter">
+                <h2>Para ti...</h2>
+                <p>Quería regalarte algo especial,<br>con recuerdos inolvidables. 🌸</p>
+                <button id="show-photos-btn">Ver recuerdos 📸</button>
+                <button id="close-letter-btn">Cerrar 💌</button>
+            </div>
+            <!-- Clic en el sobre para abrir -->
+            <p class="envelope-hint">Toca el sobre para abrirlo 💕</p>
+        </div>
+
+        <!-- Mini libro de fotos -->
+        <div id="photo-book" class="hidden">
+            <div class="book-cover" id="book-cover">
+                <span>📖 Nuestros Recuerdos</span>
+                <p class="book-hint">Toca para hojear</p>
+            </div>
+            <div class="book-pages" id="book-pages">
+                <div class="book-page" id="page-1">
+                    <img src="https://picsum.photos/200/200?random=1" alt="foto 1">
+                    <img src="https://picsum.photos/200/200?random=2" alt="foto 2">
+                </div>
+                <div class="book-page" id="page-2">
+                    <img src="https://picsum.photos/200/200?random=3" alt="foto 3">
+                    <img src="https://picsum.photos/200/200?random=4" alt="foto 4">
+                </div>
+                <div class="book-page" id="page-3">
+                    <img src="https://picsum.photos/200/200?random=5" alt="foto 5">
+                    <img src="https://picsum.photos/200/200?random=6" alt="foto 6">
+                </div>
+                <div class="book-page" id="page-4">
+                    <img src="https://picsum.photos/200/200?random=7" alt="foto 7">
+                    <img src="https://picsum.photos/200/200?random=8" alt="foto 8">
+                </div>
+                <div class="book-nav">
+                    <button id="prev-page">← Anterior</button>
+                    <span id="page-indicator">1 / 4</span>
+                    <button id="next-page">Siguiente →</button>
+                </div>
+                <button id="to-heart-btn">Hacer Magia ❤️</button>
+            </div>
+        </div>
+
+        <!-- Galería de fotos (para el corazón) -->
+        <div id="gallery-container" class="hidden">
+            <!-- Las fotos se generarán por JS -->
+        </div>
+
+        <!-- Sobre Valentín (aparece después del corazón, antes de la carta) -->
+        <div id="valentine-wrapper" class="hidden">
+            <div class="val-container">
+                <div class="val-valentines" id="val-valentines">
+                    <div class="val-envelope"></div>
+                    <div class="val-front"></div>
+                    <div class="val-card" id="val-card">
+                        <div class="val-text">♥ Te Deseo<br>Feliz Cumple<br>Kat Kat ♥</div>
+                        <div class="val-heart"></div>
+                        <button id="open-final-letter-btn">Leer carta 💌</button>
+                    </div>
+                    <div class="val-hearts">
+                        <div class="val-one"></div>
+                        <div class="val-two"></div>
+                        <div class="val-three"></div>
+                        <div class="val-four"></div>
+                        <div class="val-five"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="val-shadow"></div>
+            <p class="val-hint">Pasa el mouse por encima 💕</p>
+        </div>
+
+        <!-- Carta final (aparece al hacer clic en "Leer carta") -->
+        <div id="final-letter" class="hidden">
+            <div class="final-letter-inner">
+                <div class="letter-decoration top-decoration">✦ ♡ ✦</div>
+                <h2 class="letter-title">Para ti, Isa 🌸</h2>
+                <div class="letter-divider"></div>
+                <div class="letter-body">
+                    <p>Mensaje</p>
+                    <p> 💕</p>
+                </div>
+                <div class="letter-divider"></div>
+                <p class="letter-signature">Con todo mi amor ❤️</p>
+                <div class="letter-decoration bottom-decoration">✦ ♡ ✦</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
