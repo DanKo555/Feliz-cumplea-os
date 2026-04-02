@@ -894,3 +894,190 @@ body {
     from { box-shadow: 0 0 10px rgba(255, 64, 129, 0.5); }
     to   { box-shadow: 0 0 28px rgba(255, 64, 129, 1), 0 0 50px rgba(255, 64, 129, 0.4); }
 }
+
+/* ================================================
+   RESPONSIVE MÓVIL — Pantallas hasta 600px
+   ================================================ */
+@media (max-width: 600px) {
+
+    /* Texto principal más pequeño */
+    #text-container {
+        font-size: 1.4rem;
+        min-height: 56px;
+        padding: 0 16px;
+        text-align: center;
+    }
+
+    /* ---- SOBRE ---- */
+    #envelope {
+        width: 200px;
+        height: 130px;
+    }
+
+    .envelope-flap {
+        border-left-width: 100px;
+        border-right-width: 100px;
+        border-top-width: 68px;
+    }
+
+    #letter-paper {
+        width: 92vw;
+        padding: 24px 20px 20px;
+    }
+
+    #letter-paper h2 { font-size: 1.9rem; }
+    #letter-paper p  { font-size: 1.25rem; }
+
+    .envelope-hint { font-size: 0.8rem; }
+
+    /* ---- MINI LIBRO ---- */
+    #photo-book {
+        width: 96vw;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .book-cover {
+        width: 90vw;
+        height: auto;
+        min-height: 200px;
+        font-size: 1.3rem;
+        padding: 28px 16px;
+    }
+
+    .book-pages {
+        width: 90vw;
+        padding: 14px 10px;
+        gap: 10px;
+    }
+
+    .book-page img {
+        width: 38vw;
+        height: 38vw;
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .book-nav {
+        gap: 8px;
+    }
+
+    .book-nav button {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    #to-heart-btn {
+        font-size: 1rem;
+        padding: 10px 22px;
+    }
+
+    /* ---- FOTOS DEL CORAZÓN ---- */
+    .photo {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* ---- CARTA FINAL ---- */
+    .final-letter-inner {
+        width: 94vw;
+        padding: 32px 22px 28px;
+    }
+
+    .letter-title  { font-size: 2rem; }
+    .letter-body   { font-size: 1.25rem; }
+    .letter-signature { font-size: 1.5rem; }
+
+    /* ---- SOBRE VALENTÍN ---- */
+    .val-envelope {
+        width: 240px;
+        height: 160px;
+    }
+
+    .val-envelope::before {
+        width: 170px;
+        height: 170px;
+        top: -84px;
+        left: 35px;
+    }
+
+    .val-card {
+        width: 216px;
+        height: 148px;
+    }
+
+    .val-card::before {
+        width: 190px;
+        height: 118px;
+    }
+
+    .val-text {
+        font-size: 18px;
+        line-height: 22px;
+        top: 10px;
+    }
+
+    .val-heart {
+        top: 90px;
+    }
+
+    #val-valentines.opened .val-card {
+        top: -85px;
+    }
+
+    .val-front {
+        border-right-width: 144px;
+        border-top-width: 76px;
+        border-bottom-width: 80px;
+        left: 96px;
+    }
+
+    .val-front::before {
+        border-left-width: 240px;
+        border-top-width: 156px;
+        left: -96px;
+        top: -76px;
+    }
+
+    .val-shadow {
+        width: 240px;
+        top: 255px;
+    }
+
+    .val-hint { font-size: 0.85rem; }
+
+    /* ---- BOTÓN MÚSICA ---- */
+    #music-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+        bottom: 14px;
+        right: 14px;
+    }
+
+    /* ---- FLORES ---- */
+    .flor {
+        font-size: 1.2rem;
+    }
+}
+
+/* Pantallas medianas: tablets en portrait (601px – 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+
+    #text-container { font-size: 2rem; }
+
+    .book-cover {
+        width: 80vw;
+        height: auto;
+        min-height: 240px;
+    }
+
+    .book-pages { width: 82vw; }
+
+    .book-page img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .final-letter-inner { width: 88vw; }
+}

@@ -281,7 +281,10 @@ function generarFotosCorazon() {
 function formarCorazon() {
     const centerX = window.innerWidth / 2;
     const centerY = window.innerHeight / 2 + 20;
-    const scale = Math.min(window.innerWidth, window.innerHeight) / 35;
+    // Pantallas pequeñas: divisor mayor → corazón más chico
+    const isMobile = window.innerWidth <= 600;
+    const photoSize = isMobile ? 30 : 45; // mitad del tamaño de la foto
+    const scale = Math.min(window.innerWidth, window.innerHeight) / (isMobile ? 48 : 35);
 
     photos.forEach((img, index) => {
         let t = (index / photoCount) * 2 * Math.PI;
