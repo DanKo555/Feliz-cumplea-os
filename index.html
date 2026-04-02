@@ -8,11 +8,32 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Dancing+Script:wght@700&display=swap"
         rel="stylesheet">
+    <!-- Música de fondo -->
+    <audio id="bg-music" loop>
+        <source src="Rawayana - Feriado (Rawalizer).mp3" type="audio/mpeg">
+    </audio>
 </head>
 
 <body>
     <!-- Cascada Hacker (ahora rosa desde el inicio) -->
     <canvas id="matrix"></canvas>
+
+    <!-- Flores flotantes decorativas -->
+    <div class="flores-container" aria-hidden="true">
+        <span class="flor" style="--delay:0s; --x:5%">🌸</span>
+        <span class="flor" style="--delay:1.2s; --x:15%">🌷</span>
+        <span class="flor" style="--delay:2.4s; --x:25%">🌼</span>
+        <span class="flor" style="--delay:0.6s; --x:35%">🌸</span>
+        <span class="flor" style="--delay:3s; --x:45%">🌷</span>
+        <span class="flor" style="--delay:1.8s; --x:55%">🌼</span>
+        <span class="flor" style="--delay:0.9s; --x:65%">🌸</span>
+        <span class="flor" style="--delay:2.1s; --x:75%">🌷</span>
+        <span class="flor" style="--delay:3.6s; --x:85%">🌼</span>
+        <span class="flor" style="--delay:1.5s; --x:93%">🌸</span>
+    </div>
+
+    <!-- Botón de música -->
+    <button id="music-btn" title="Música">🎵</button>
 
     <!-- Contenedor principal -->
     <div id="main-container">
@@ -50,24 +71,36 @@
             </div>
             <div class="book-pages" id="book-pages">
                 <div class="book-page" id="page-1">
-                    <img src="https://picsum.photos/200/200?random=1" alt="foto 1">
-                    <img src="https://picsum.photos/200/200?random=2" alt="foto 2">
+                    <img src="imagenes/1761353322501.jpg" alt="foto 1">
+                    <img src="imagenes/Headliners_202633123502.jpg" alt="foto 2">
                 </div>
                 <div class="book-page" id="page-2">
-                    <img src="https://picsum.photos/200/200?random=3" alt="foto 3">
-                    <img src="https://picsum.photos/200/200?random=4" alt="foto 4">
+                    <img src="imagenes/IMG-20251024-WA0101.jpg" alt="foto 3">
+                    <img src="imagenes/IMG-20260401-WA0007.jpg" alt="foto 4">
                 </div>
                 <div class="book-page" id="page-3">
-                    <img src="https://picsum.photos/200/200?random=5" alt="foto 5">
-                    <img src="https://picsum.photos/200/200?random=6" alt="foto 6">
+                    <img src="imagenes/IMG-20260401-WA0011.jpg" alt="foto 5">
+                    <img src="imagenes/IMG-20260401-WA0024.jpg" alt="foto 6">
                 </div>
                 <div class="book-page" id="page-4">
-                    <img src="https://picsum.photos/200/200?random=7" alt="foto 7">
-                    <img src="https://picsum.photos/200/200?random=8" alt="foto 8">
+                    <img src="imagenes/IMG-20260401-WA0026.jpg" alt="foto 7">
+                    <img src="imagenes/IMG-20260401-WA0028.jpg" alt="foto 8">
+                </div>
+                <div class="book-page" id="page-5">
+                    <img src="imagenes/IMG-20260401-WA0029.jpg" alt="foto 9">
+                    <img src="imagenes/IMG-20260401-WA0032.jpg" alt="foto 10">
+                </div>
+                <div class="book-page" id="page-6">
+                    <img src="imagenes/IMG-20260401-WA0033.jpg" alt="foto 11">
+                    <img src="imagenes/IMG_20251026_005416.jpg" alt="foto 12">
+                </div>
+                <div class="book-page" id="page-7">
+                    <img src="imagenes/IMG_20251123_221605.jpg" alt="foto 13">
+                    <img src="imagenes/image.png" alt="foto 14">
                 </div>
                 <div class="book-nav">
                     <button id="prev-page">← Anterior</button>
-                    <span id="page-indicator">1 / 4</span>
+                    <span id="page-indicator">1 / 7</span>
                     <button id="next-page">Siguiente →</button>
                 </div>
                 <button id="to-heart-btn">Hacer Magia ❤️</button>
@@ -86,7 +119,7 @@
                     <div class="val-envelope"></div>
                     <div class="val-front"></div>
                     <div class="val-card" id="val-card">
-                        <div class="val-text">♥ Te Deseo<br>Feliz Cumple<br>Kat Kat ♥</div>
+                        <div class="val-text">♥ Te Deseo<br>Feliz Cumple<br>ISA ♥</div>
                         <div class="val-heart"></div>
                         <button id="open-final-letter-btn">Leer carta 💌</button>
                     </div>

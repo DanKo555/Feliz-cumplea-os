@@ -53,6 +53,43 @@ const textElement = document.getElementById('typing-text');
 const message = "FELIZ CUMPLEAÑOS ISA 🌸";
 let charIndex = 0;
 
+// Música de fondo
+const bgMusic = document.getElementById('bg-music');
+const musicBtn = document.getElementById('music-btn');
+let musicPlaying = false;
+let musicStarted = false;
+
+function tryPlayMusic() {
+    if (!musicStarted) {
+        bgMusic.volume = 0.4;
+        bgMusic.play().then(() => {
+            musicPlaying = true;
+            musicStarted = true;
+            musicBtn.textContent = '🎵';
+            musicBtn.classList.add('playing');
+        }).catch(() => {});
+    }
+}
+
+musicBtn.addEventListener('click', () => {
+    if (musicPlaying) {
+        bgMusic.pause();
+        musicPlaying = false;
+        musicBtn.textContent = '🔇';
+        musicBtn.classList.remove('playing');
+    } else {
+        bgMusic.play().then(() => {
+            musicPlaying = true;
+            musicStarted = true;
+            musicBtn.textContent = '🎵';
+            musicBtn.classList.add('playing');
+        }).catch(() => {});
+    }
+});
+
+// Intentar reproducir en el primer clic en cualquier parte
+document.addEventListener('click', tryPlayMusic, { once: true });
+
 function typeText() {
     if (charIndex < message.length) {
         textElement.innerHTML += message.charAt(charIndex);
@@ -190,10 +227,29 @@ toHeartBtn.addEventListener('click', () => {
 function generarFotosCorazon() {
     photos = [];
 
+    // Lista de imágenes reales
+    const imageList = [
+        'imagenes/1761353322501.jpg',
+        'imagenes/Headliners_202633123502.jpg',
+        'imagenes/IMG-20251024-WA0101.jpg',
+        'imagenes/IMG-20260401-WA0007.jpg',
+        'imagenes/IMG-20260401-WA0011.jpg',
+        'imagenes/IMG-20260401-WA0024.jpg',
+        'imagenes/IMG-20260401-WA0026.jpg',
+        'imagenes/IMG-20260401-WA0028.jpg',
+        'imagenes/IMG-20260401-WA0029.jpg',
+        'imagenes/IMG-20260401-WA0032.jpg',
+        'imagenes/IMG-20260401-WA0033.jpg',
+        'imagenes/IMG_20251026_005416.jpg',
+        'imagenes/IMG_20251123_221605.jpg',
+        'imagenes/image.png',
+        'imagenes/image1.png'
+    ];
+
     // Primero: dispersar las fotos aleatoriamente
     for (let i = 0; i < photoCount; i++) {
         const img = document.createElement('img');
-        img.src = `https://picsum.photos/200/200?random=${i + 10}`;
+        img.src = imageList[i % imageList.length]; // ciclar si hay más fotos que imágenes
         img.className = 'photo';
 
         const startX = (window.innerWidth / 2) - 45;
