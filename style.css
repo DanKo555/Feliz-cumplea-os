@@ -5,8 +5,10 @@
 }
 
 body {
-    background-color: #1a0010;
-    color: #ff4081;
+    background-color: #D8CFF0;
+    /* Lila suave */
+    color: #F8F5F0;
+    /* Blanco crema */
     font-family: 'Share Tech Mono', monospace;
     overflow: hidden;
     width: 100vw;
@@ -42,16 +44,20 @@ body {
 /* Texto de Cumpleaños */
 #text-container {
     text-align: center;
-    text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081;
+    text-shadow: 0 0 10px #A8BFA3, 0 0 20px #A8BFA3;
+    /* Sombra Salvia */
     font-size: 2.5rem;
     margin-bottom: 20px;
     min-height: 80px;
     transition: all 1s ease;
-    color: #ff4081;
+    color: #F8F5F0;
+    /* Texto crema */
 }
 
 /* Elementos clickeables */
-#envelope-wrapper, #photo-book, #gallery-container * {
+#envelope-wrapper,
+#photo-book,
+#gallery-container * {
     pointer-events: auto;
 }
 
@@ -80,15 +86,22 @@ body {
 }
 
 .envelope-hint {
-    color: #ffb3cc;
+    color: #F8F5F0;
     font-size: 0.95rem;
-    text-shadow: 0 0 8px #ff4081;
+    text-shadow: 0 0 8px #A8BFA3;
     animation: pulse-hint 2s infinite;
 }
 
 @keyframes pulse-hint {
-    0%, 100% { opacity: 0.7; }
-    50% { opacity: 1; }
+
+    0%,
+    100% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }
 
 /* Sobre */
@@ -98,7 +111,8 @@ body {
     position: relative;
     cursor: pointer;
     transition: transform 0.3s ease;
-    filter: drop-shadow(0 0 18px rgba(255, 64, 129, 0.8));
+    filter: drop-shadow(0 0 18px rgba(168, 191, 163, 0.6));
+    /* Sombra Salvia */
 }
 
 #envelope:hover {
@@ -109,7 +123,8 @@ body {
 .envelope-body {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #ff80ab 0%, #f50057 100%);
+    background: linear-gradient(135deg, #A8BFA3 0%, #8DA688 100%);
+    /* Salvia */
     border-radius: 6px 6px 10px 10px;
     display: flex;
     justify-content: center;
@@ -124,11 +139,27 @@ body {
 }
 
 @keyframes heartbeat {
-    0%, 100% { transform: scale(1); }
-    14% { transform: scale(1.15); }
-    28% { transform: scale(1); }
-    42% { transform: scale(1.1); }
-    56% { transform: scale(1); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    14% {
+        transform: scale(1.15);
+    }
+
+    28% {
+        transform: scale(1);
+    }
+
+    42% {
+        transform: scale(1.1);
+    }
+
+    56% {
+        transform: scale(1);
+    }
 }
 
 /* Flap del sobre */
@@ -140,7 +171,8 @@ body {
     height: 0;
     border-left: 130px solid transparent;
     border-right: 130px solid transparent;
-    border-top: 90px solid #c2185b;
+    border-top: 90px solid #7D9A77;
+    /* Verde más oscuro para el doblez */
     transform-origin: top center;
     transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     z-index: 3;
@@ -154,11 +186,13 @@ body {
 
 /* Carta de papel */
 #letter-paper {
-    background: linear-gradient(160deg, #fff8fa 0%, #ffe4ef 100%);
-    color: #5c1d3a;
+    background: #F8F5F0;
+    /* Crema */
+    color: #4C614A;
+    /* Texto oscuro */
     padding: 32px 36px 28px;
     border-radius: 10px;
-    box-shadow: 0 8px 40px rgba(255, 64, 129, 0.4);
+    box-shadow: 0 8px 40px rgba(168, 191, 163, 0.4);
     text-align: center;
     font-family: 'Dancing Script', cursive;
     max-width: 90%;
@@ -167,7 +201,8 @@ body {
     transition: opacity 0.6s ease, transform 0.6s ease, visibility 0.6s ease;
     visibility: hidden;
     opacity: 0;
-    border: 2px solid #ffb3cc;
+    border: 2px solid #D8CFF0;
+    /* Borde lila */
     position: relative;
 }
 
@@ -193,8 +228,8 @@ body {
 #letter-paper h2 {
     font-size: 2.6rem;
     margin-bottom: 12px;
-    color: #e91e63;
-    text-shadow: 0 0 6px rgba(233, 30, 99, 0.3);
+    color: #8DA688;
+    text-shadow: 0 0 6px rgba(168, 191, 163, 0.3);
 }
 
 #letter-paper p {
@@ -204,7 +239,7 @@ body {
 }
 
 #letter-paper button {
-    background: linear-gradient(135deg, #e91e63, #f50057);
+    background: linear-gradient(135deg, #A8BFA3, #8DA688);
     color: white;
     border: none;
     padding: 11px 22px;
@@ -213,18 +248,19 @@ body {
     cursor: pointer;
     font-family: 'Share Tech Mono', monospace;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.5);
+    box-shadow: 0 4px 15px rgba(168, 191, 163, 0.5);
     margin: 5px;
 }
 
 #letter-paper button:hover {
     transform: scale(1.07);
-    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.7);
+    box-shadow: 0 6px 20px rgba(168, 191, 163, 0.7);
 }
 
 #close-letter-btn {
-    background: linear-gradient(135deg, #9c27b0, #673ab7) !important;
-    box-shadow: 0 4px 15px rgba(103, 58, 183, 0.4) !important;
+    background: linear-gradient(135deg, #D8CFF0, #BDB2D8) !important;
+    box-shadow: 0 4px 15px rgba(216, 207, 240, 0.4) !important;
+    color: #4C614A !important;
 }
 
 /* ========================
@@ -243,7 +279,7 @@ body {
 }
 
 .book-cover {
-    background: linear-gradient(135deg, #880e4f 0%, #c2185b 50%, #e91e63 100%);
+    background: linear-gradient(135deg, #7D9A77 0%, #8DA688 50%, #A8BFA3 100%);
     color: white;
     width: 420px;
     height: 300px;
@@ -254,32 +290,33 @@ body {
     align-items: center;
     gap: 16px;
     cursor: pointer;
-    box-shadow: -8px 8px 28px rgba(0,0,0,0.6), 0 0 40px rgba(255, 64, 129, 0.5);
+    box-shadow: -8px 8px 28px rgba(0, 0, 0, 0.4), 0 0 40px rgba(168, 191, 163, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 10px solid #4a0020;
+    border-left: 10px solid #4C614A;
     font-family: 'Dancing Script', cursive;
     font-size: 1.8rem;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     position: relative;
 }
 
 .book-cover::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     border-radius: 8px 16px 16px 8px;
-    background: repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 18px,
-        rgba(255,255,255,0.05) 18px,
-        rgba(255,255,255,0.05) 19px
-    );
+    background: repeating-linear-gradient(0deg,
+            transparent,
+            transparent 18px,
+            rgba(255, 255, 255, 0.05) 18px,
+            rgba(255, 255, 255, 0.05) 19px);
 }
 
 .book-cover:hover {
     transform: rotate(-2deg) scale(1.04);
-    box-shadow: -8px 8px 25px rgba(0,0,0,0.6), 0 0 40px rgba(255, 64, 129, 0.6);
+    box-shadow: -8px 8px 25px rgba(0, 0, 0, 0.4), 0 0 40px rgba(168, 191, 163, 0.6);
 }
 
 .book-hint {
@@ -290,16 +327,16 @@ body {
 
 /* Páginas del libro */
 .book-pages {
-    background: #fff8fa;
+    background: #F8F5F0;
     width: 440px;
     border-radius: 4px 12px 12px 4px;
-    box-shadow: -8px 6px 28px rgba(0,0,0,0.6), 0 0 35px rgba(255, 64, 129, 0.4);
+    box-shadow: -8px 6px 28px rgba(0, 0, 0, 0.3), 0 0 35px rgba(168, 191, 163, 0.4);
     padding: 22px;
     display: none;
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    border-left: 10px solid #c2185b;
+    border-left: 10px solid #7D9A77;
     position: relative;
 }
 
@@ -309,8 +346,15 @@ body {
 }
 
 @keyframes openBook {
-    from { opacity: 0; transform: rotateY(-20deg) scale(0.95); }
-    to { opacity: 1; transform: rotateY(0deg) scale(1); }
+    from {
+        opacity: 0;
+        transform: rotateY(-20deg) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateY(0deg) scale(1);
+    }
 }
 
 .book-page {
@@ -329,7 +373,7 @@ body {
     height: 170px;
     object-fit: cover;
     border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     border: 3px solid #fff;
     transition: transform 0.3s ease;
 }
@@ -346,7 +390,7 @@ body {
 }
 
 .book-nav button {
-    background: linear-gradient(135deg, #e91e63, #f50057);
+    background: linear-gradient(135deg, #A8BFA3, #8DA688);
     color: white;
     border: none;
     padding: 7px 14px;
@@ -355,38 +399,43 @@ body {
     font-family: 'Share Tech Mono', monospace;
     font-size: 0.85rem;
     transition: all 0.25s ease;
-    box-shadow: 0 3px 10px rgba(233, 30, 99, 0.4);
+    box-shadow: 0 3px 10px rgba(168, 191, 163, 0.4);
 }
 
 .book-nav button:hover {
     transform: scale(1.08);
-    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.6);
+    box-shadow: 0 5px 15px rgba(168, 191, 163, 0.6);
 }
 
 #page-indicator {
-    color: #c2185b;
+    color: #4C614A;
     font-family: 'Share Tech Mono', monospace;
     font-size: 0.9rem;
 }
 
 #to-heart-btn {
-    background: linear-gradient(135deg, #ff4081, #f50057);
-    color: white;
+    background: linear-gradient(135deg, #D8CFF0, #BDB2D8);
+    color: #4C614A;
     border: none;
     padding: 12px 28px;
     font-size: 1.2rem;
     border-radius: 30px;
     cursor: pointer;
     font-family: 'Dancing Script', cursive;
-    box-shadow: 0 4px 18px rgba(255, 64, 129, 0.6);
+    box-shadow: 0 4px 18px rgba(216, 207, 240, 0.6);
     transition: all 0.3s ease;
     margin-top: 6px;
     animation: glowing 2s infinite alternate;
 }
 
 @keyframes glowing {
-    from { box-shadow: 0 4px 18px rgba(255, 64, 129, 0.5); }
-    to { box-shadow: 0 4px 30px rgba(255, 64, 129, 0.9), 0 0 15px #ff4081; }
+    from {
+        box-shadow: 0 4px 18px rgba(216, 207, 240, 0.5);
+    }
+
+    to {
+        box-shadow: 0 4px 30px rgba(216, 207, 240, 0.9), 0 0 15px #D8CFF0;
+    }
 }
 
 #to-heart-btn:hover {
@@ -406,7 +455,7 @@ body {
 }
 
 .final-letter-inner {
-    background: linear-gradient(170deg, #fff8fa 0%, #ffe4ef 60%, #fce4ec 100%);
+    background: linear-gradient(170deg, #F8F5F0 0%, #F8F5F0 60%, #EFEBE4 100%);
     width: 480px;
     max-width: 92vw;
     max-height: 85vh;
@@ -414,27 +463,25 @@ body {
     border-radius: 12px;
     padding: 40px 44px 36px;
     box-shadow:
-        0 0 0 2px #ffb3cc,
+        0 0 0 2px #A8BFA3,
         0 0 0 5px #fff,
-        0 0 0 7px #f48fb1,
-        0 20px 60px rgba(233, 30, 99, 0.35),
-        0 0 80px rgba(255, 64, 129, 0.2);
+        0 0 0 7px #D8CFF0,
+        0 20px 60px rgba(168, 191, 163, 0.35),
+        0 0 80px rgba(216, 207, 240, 0.2);
     font-family: 'Dancing Script', cursive;
-    color: #5c1d3a;
+    color: #4C614A;
     text-align: center;
     position: relative;
     /* Líneas de papel decorativas */
     background-image:
-        linear-gradient(170deg, #fff8fa 0%, #ffe4ef 60%, #fce4ec 100%),
-        repeating-linear-gradient(
-            transparent,
+        linear-gradient(170deg, #F8F5F0 0%, #F8F5F0 60%, #EFEBE4 100%),
+        repeating-linear-gradient(transparent,
             transparent 31px,
-            rgba(233, 30, 99, 0.12) 31px,
-            rgba(233, 30, 99, 0.12) 32px
-        );
+            rgba(168, 191, 163, 0.25) 31px,
+            rgba(168, 191, 163, 0.25) 32px);
     background-blend-mode: multiply;
-    /* Margen izquierdo rosado como cuaderno */
-    border-left: 5px solid #f48fb1;
+    /* Margen izquierdo lila suave como cuaderno */
+    border-left: 5px solid #D8CFF0;
     animation: letterEntrance 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 
@@ -443,6 +490,7 @@ body {
         opacity: 0;
         transform: scale(0.8) translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: scale(1) translateY(0);
@@ -458,9 +506,9 @@ body {
     transform: translateX(-50%);
     width: 80px;
     height: 28px;
-    background: linear-gradient(135deg, #e91e63, #f48fb1);
+    background: linear-gradient(135deg, #A8BFA3, #8DA688);
     border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(233, 30, 99, 0.4);
+    box-shadow: 0 2px 8px rgba(168, 191, 163, 0.4);
 }
 
 /* Esquinas decorativas */
@@ -475,32 +523,37 @@ body {
 
 .letter-decoration {
     font-size: 1.2rem;
-    color: #e91e63;
+    color: #8DA688;
     letter-spacing: 10px;
     opacity: 0.7;
 }
 
-.top-decoration { margin-bottom: 12px; }
-.bottom-decoration { margin-top: 12px; }
+.top-decoration {
+    margin-bottom: 12px;
+}
+
+.bottom-decoration {
+    margin-top: 12px;
+}
 
 .letter-title {
     font-size: 2.8rem;
-    color: #c2185b;
+    color: #A8BFA3;
     margin-bottom: 10px;
-    text-shadow: 0 2px 8px rgba(194, 24, 91, 0.25);
+    text-shadow: 0 2px 8px rgba(168, 191, 163, 0.25);
 }
 
 .letter-divider {
     width: 70%;
     height: 1.5px;
-    background: linear-gradient(90deg, transparent, #f48fb1, transparent);
+    background: linear-gradient(90deg, transparent, #D8CFF0, transparent);
     margin: 12px auto;
 }
 
 .letter-body {
     font-size: 1.55rem;
     line-height: 1.8;
-    color: #7b2d4a;
+    color: #4C614A;
     margin: 14px 0;
     text-align: left;
     padding: 0 8px;
@@ -512,7 +565,7 @@ body {
 
 .letter-signature {
     font-size: 1.9rem;
-    color: #e91e63;
+    color: #A8BFA3;
     font-style: italic;
     margin-top: 8px;
 }
@@ -532,7 +585,7 @@ body {
     height: 90px;
     background-color: #fff;
     padding: 5px;
-    box-shadow: 0 4px 15px rgba(255, 64, 129, 0.5);
+    box-shadow: 0 4px 15px rgba(216, 207, 240, 0.5);
     transition: all 2s cubic-bezier(0.25, 1, 0.5, 1);
     border-radius: 2px;
     object-fit: cover;
@@ -543,7 +596,7 @@ body {
 .photo:hover {
     transform: scale(1.5) rotate(0deg) !important;
     z-index: 100 !important;
-    box-shadow: 0 10px 25px rgba(255, 64, 129, 0.8);
+    box-shadow: 0 10px 25px rgba(216, 207, 240, 0.8);
 }
 
 /* ========================
@@ -563,9 +616,9 @@ body {
 }
 
 .val-hint {
-    color: #ffb3cc;
+    color: #F8F5F0;
     font-size: 1rem;
-    text-shadow: 0 0 8px #ff4081;
+    text-shadow: 0 0 8px #A8BFA3;
     animation: pulse-hint 2s infinite;
     font-family: 'Share Tech Mono', monospace;
 }
@@ -582,20 +635,28 @@ body {
 }
 
 @keyframes val-up {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-30px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
 }
 
 .val-envelope {
     position: relative;
     width: 300px;
     height: 200px;
-    background-color: #e91e63;
+    background-color: #D8CFF0;
+    /* Lila suave */
     border-radius: 4px;
 }
 
 .val-envelope::before {
-    background-color: #c2185b;
+    background-color: #BDB2D8;
     content: "";
     position: absolute;
     width: 212px;
@@ -608,12 +669,12 @@ body {
 
 .val-card {
     position: absolute;
-    background-color: #fff8fa;
+    background-color: #F8F5F0;
     width: 270px;
     height: 185px;
     top: 5px;
     left: 15px;
-    box-shadow: -5px -5px 100px rgba(0,0,0,0.4);
+    box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
     transition: top 0.5s ease;
     border-radius: 4px;
     overflow: hidden;
@@ -622,7 +683,7 @@ body {
 .val-card::before {
     content: "";
     position: absolute;
-    border: 3px solid #c2185b;
+    border: 3px solid #A8BFA3;
     border-style: dotted;
     width: 240px;
     height: 155px;
@@ -645,12 +706,12 @@ body {
     top: 16px;
     left: 50%;
     transform: translateX(-50%);
-    color: #880e4f;
+    color: #4C614A;
     white-space: nowrap;
 }
 
 .val-heart {
-    background-color: #d62828;
+    background-color: #A8BFA3;
     display: inline-block;
     height: 28px;
     margin: 0 10px;
@@ -664,7 +725,7 @@ body {
 .val-heart::before,
 .val-heart::after {
     content: "";
-    background-color: #d62828;
+    background-color: #A8BFA3;
     border-radius: 50%;
     height: 28px;
     position: absolute;
@@ -687,7 +748,7 @@ body {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(135deg, #e91e63, #f50057);
+    background: linear-gradient(135deg, #A8BFA3, #8DA688);
     color: white;
     border: none;
     padding: 8px 20px;
@@ -696,7 +757,7 @@ body {
     cursor: pointer;
     font-family: 'Share Tech Mono', monospace;
     white-space: nowrap;
-    box-shadow: 0 3px 10px rgba(233, 30, 99, 0.5);
+    box-shadow: 0 3px 10px rgba(168, 191, 163, 0.5);
     opacity: 0;
     transition: opacity 0.4s ease 0.3s, transform 0.2s ease, box-shadow 0.2s ease;
     z-index: 20;
@@ -708,7 +769,7 @@ body {
 
 #open-final-letter-btn:hover {
     transform: translateX(-50%) scale(1.1);
-    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.7);
+    box-shadow: 0 5px 15px rgba(168, 191, 163, 0.7);
 }
 
 /* Corazoncitos flotantes */
@@ -718,8 +779,12 @@ body {
     left: 0;
 }
 
-.val-one, .val-two, .val-three, .val-four, .val-five {
-    background-color: #ff4081;
+.val-one,
+.val-two,
+.val-three,
+.val-four,
+.val-five {
+    background-color: #F8F5F0;
     display: inline-block;
     height: 10px;
     margin: 0 10px;
@@ -729,44 +794,83 @@ body {
     top: 50px;
 }
 
-.val-one::before, .val-two::before, .val-three::before,
-.val-four::before, .val-five::before,
-.val-one::after, .val-two::after, .val-three::after,
-.val-four::after, .val-five::after {
+.val-one::before,
+.val-two::before,
+.val-three::before,
+.val-four::before,
+.val-five::before,
+.val-one::after,
+.val-two::after,
+.val-three::after,
+.val-four::after,
+.val-five::after {
     content: "";
-    background-color: #ff4081;
+    background-color: #F8F5F0;
     border-radius: 50%;
     height: 10px;
     position: absolute;
     width: 10px;
 }
 
-.val-one::before, .val-two::before, .val-three::before,
-.val-four::before, .val-five::before {
+.val-one::before,
+.val-two::before,
+.val-three::before,
+.val-four::before,
+.val-five::before {
     top: -5px;
     left: 0;
 }
 
-.val-one::after, .val-two::after, .val-three::after,
-.val-four::after, .val-five::after {
+.val-one::after,
+.val-two::after,
+.val-three::after,
+.val-four::after,
+.val-five::after {
     left: 5px;
     top: 0;
 }
 
-.val-one   { left: 10px; animation: val-heart 1s   ease-out infinite; }
-.val-two   { left: 30px; animation: val-heart 2s   ease-out infinite; }
-.val-three { left: 50px; animation: val-heart 1.5s ease-out infinite; }
-.val-four  { left: 70px; animation: val-heart 2.3s ease-out infinite; }
-.val-five  { left: 90px; animation: val-heart 1.7s ease-out infinite; }
+.val-one {
+    left: 10px;
+    animation: val-heart 1s ease-out infinite;
+}
+
+.val-two {
+    left: 30px;
+    animation: val-heart 2s ease-out infinite;
+}
+
+.val-three {
+    left: 50px;
+    animation: val-heart 1.5s ease-out infinite;
+}
+
+.val-four {
+    left: 70px;
+    animation: val-heart 2.3s ease-out infinite;
+}
+
+.val-five {
+    left: 90px;
+    animation: val-heart 1.7s ease-out infinite;
+}
 
 @keyframes val-heart {
-    0%   { transform: translateY(0) rotate(-45deg) scale(0.3); opacity: 1; }
-    100% { transform: translateY(-150px) rotate(-45deg) scale(1.3); opacity: 0.3; }
+    0% {
+        transform: translateY(0) rotate(-45deg) scale(0.3);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-150px) rotate(-45deg) scale(1.3);
+        opacity: 0.3;
+    }
 }
 
 .val-front {
     position: absolute;
-    border-right: 180px solid #f48fb1;
+    border-right: 180px solid #D8CFF0;
+    /* Lila suave */
     border-top: 95px solid transparent;
     border-bottom: 100px solid transparent;
     left: 120px;
@@ -779,7 +883,7 @@ body {
 .val-front::before {
     position: absolute;
     content: "";
-    border-left: 300px solid #f8bbd0;
+    border-left: 300px solid #EBE6F5;
     border-top: 195px solid transparent;
     left: -120px;
     top: -95px;
@@ -792,7 +896,7 @@ body {
     width: 300px;
     height: 22px;
     border-radius: 50%;
-    background-color: rgba(233, 30, 99, 0.25);
+    background-color: rgba(216, 207, 240, 0.4);
     top: 318px;
     left: 50%;
     transform: translateX(-50%);
@@ -801,8 +905,15 @@ body {
 }
 
 @keyframes val-scale {
-    0%, 100% { transform: translateX(-50%) scaleX(1); }
-    50%       { transform: translateX(-50%) scaleX(0.85); }
+
+    0%,
+    100% {
+        transform: translateX(-50%) scaleX(1);
+    }
+
+    50% {
+        transform: translateX(-50%) scaleX(0.85);
+    }
 }
 
 /* ========================
@@ -844,16 +955,28 @@ body {
         opacity: 0;
         transform: translateY(0) rotate(0deg) scale(0.8);
     }
+
     10% {
         opacity: 0.9;
     }
+
     80% {
         opacity: 0.7;
     }
+
     100% {
         opacity: 0;
         transform: translateY(-110vh) rotate(360deg) scale(1.1);
     }
+}
+
+.lirio-decor {
+    width: 80px;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+    opacity: 0.95;
+    filter: drop-shadow(0 4px 6px rgba(168, 191, 163, 0.5));
 }
 
 /* ========================
@@ -891,8 +1014,13 @@ body {
 }
 
 @keyframes music-pulse {
-    from { box-shadow: 0 0 10px rgba(255, 64, 129, 0.5); }
-    to   { box-shadow: 0 0 28px rgba(255, 64, 129, 1), 0 0 50px rgba(255, 64, 129, 0.4); }
+    from {
+        box-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+    }
+
+    to {
+        box-shadow: 0 0 28px rgba(255, 64, 129, 1), 0 0 50px rgba(255, 64, 129, 0.4);
+    }
 }
 
 /* ================================================
@@ -925,10 +1053,17 @@ body {
         padding: 24px 20px 20px;
     }
 
-    #letter-paper h2 { font-size: 1.9rem; }
-    #letter-paper p  { font-size: 1.25rem; }
+    #letter-paper h2 {
+        font-size: 1.9rem;
+    }
 
-    .envelope-hint { font-size: 0.8rem; }
+    #letter-paper p {
+        font-size: 1.25rem;
+    }
+
+    .envelope-hint {
+        font-size: 0.8rem;
+    }
 
     /* ---- MINI LIBRO ---- */
     #photo-book {
@@ -984,9 +1119,17 @@ body {
         padding: 32px 22px 28px;
     }
 
-    .letter-title  { font-size: 2rem; }
-    .letter-body   { font-size: 1.25rem; }
-    .letter-signature { font-size: 1.5rem; }
+    .letter-title {
+        font-size: 2rem;
+    }
+
+    .letter-body {
+        font-size: 1.25rem;
+    }
+
+    .letter-signature {
+        font-size: 1.5rem;
+    }
 
     /* ---- SOBRE VALENTÍN ---- */
     .val-envelope {
@@ -1044,7 +1187,9 @@ body {
         top: 255px;
     }
 
-    .val-hint { font-size: 0.85rem; }
+    .val-hint {
+        font-size: 0.85rem;
+    }
 
     /* ---- BOTÓN MÚSICA ---- */
     #music-btn {
@@ -1064,7 +1209,9 @@ body {
 /* Pantallas medianas: tablets en portrait (601px – 768px) */
 @media (min-width: 601px) and (max-width: 768px) {
 
-    #text-container { font-size: 2rem; }
+    #text-container {
+        font-size: 2rem;
+    }
 
     .book-cover {
         width: 80vw;
@@ -1072,12 +1219,16 @@ body {
         min-height: 240px;
     }
 
-    .book-pages { width: 82vw; }
+    .book-pages {
+        width: 82vw;
+    }
 
     .book-page img {
         width: 140px;
         height: 140px;
     }
 
-    .final-letter-inner { width: 88vw; }
+    .final-letter-inner {
+        width: 88vw;
+    }
 }
